@@ -1,0 +1,94 @@
+/* Table of Contents:
+ * 1. General Styling
+ * 2. header
+ * 3. Indexes 
+ */
+
+
+/* 1. General Styling */
+
+:root {
+        --fs-general: clamp(1.1rem, 2.5vw, 1.36rem);
+
+        --clr-links-base: #40F0E0;
+        --clr-links-hover: #11FF00;
+
+        --clr-article-bg: rgba(128, 128, 128, 0.5);
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+        margin: 0;
+        
+        background-image: url('../pix/limanu.jpeg');
+        background-size: cover;
+        background-repeat: none;
+        background-attachment: fixed;
+
+        word-wrap: break-word;
+        font-size: var(--fs-general);
+        color: white;
+        text-shadow: 1px 1px black;
+}
+
+a {
+        text-decoration: none;
+        color: var(--clr-links-base);
+}
+
+a:hover {
+        color: var(--clr-links-hover);
+}
+
+a:focus { 
+        color: lightgreen;
+        outline: 2px solid red;
+}
+
+.center {
+        text-align: center;
+}
+
+
+/* 2. header */
+
+header {
+	background-color: cyan;
+	overflow: hidden;
+
+	color: yellow;
+	text-shadow: 2px 2px black;
+}
+
+
+/* 3. Indexes */
+
+main { 
+	margin-top: 3rem;
+}
+
+nav a {
+	background-color: purple;
+	padding: 0.5rem 0.7rem;
+
+	border: 4px solid black;
+	outline: 2px solid white;
+	border-radius: 5px;
+}
+
+footer { 
+	display: inline-block;
+	margin-top: 3rem;
+}
+
+footer a { 
+	display: block;
+	background-color: gray;
+
+	padding-left: 0.7rem;
+	padding-right: 1rem;
+	border-left: 4px solid lime;
+}

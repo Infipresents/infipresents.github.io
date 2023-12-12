@@ -1,0 +1,133 @@
+/* Table of Contents:
+ * 1. General Styling
+ * 2. header
+ * 3. Link to Main and Contents
+ * 4. main and Indexes
+
+
+/* 1. General Styling */
+
+:root { 
+	--fs-general: clamp(1.1rem, 2.5vw, 1.36rem); 
+	
+	--clr-links-base: #40F0E0;
+	--clr-links-hover: #11FF00;
+
+	--clr-contents-bg: rgba(171, 0, 255, 0.2);
+	--clr-index-bg: rgba(105, 105, 105, 0.5);
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	background-image: url('../pix/limanu.jpeg');
+	background-size: cover;
+	background-repeat: none;
+	background-attachment: fixed;
+
+	word-wrap: break-word;
+	font-size: var(--fs-general);
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+a { 
+	text-decoration: none;
+	color: var(--clr-links-base);
+}
+
+a:hover { 
+	color: var(--clr-links-hover)
+}
+
+a:focus {
+	color: lightgreen;
+	outline: 2px solid red;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* 2. header */
+
+header {
+	background-color: cyan;
+	overflow: hidden;
+
+	color: yellow;
+	text-shadow: 2px 2px black;
+}
+
+
+/* 3. Link to Main and Contents */
+
+.helpful_links {
+	background-color: var(--clr-contents-bg);
+
+	width: min(75ch, 95%);
+	margin-inline: auto;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	padding: 1.3rem 1.8rem;
+
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+aside {
+	margin-top: 2.5rem;
+}
+
+aside a {
+	display: inline-block;
+	background-color: gray;
+	border-left: 3px solid lime;
+	border-right: 3px solid lime;
+	padding: 0.4rem 0.7rem;
+
+	margin-bottom: 0.4rem;
+	margin-right: 0.7rem;
+}
+
+
+/* 4. main */
+
+main {
+	display: flex;
+	flex-direction: column; /* Default for under 720 px */
+}
+
+@media ( min-width: 720px ) {
+	main {
+		flex-direction: row;
+	}
+
+	main > * {
+		flex-basis: 100%;
+	}
+
+	/* main > * + * {
+		margin-left: 0.5rem;
+	}  I usually love this line, but here it isn't needed! */
+
+	aside { 
+		display: none;
+	}
+}
+
+main nav { 
+	background-color: var(--clr-index-bg);
+	padding: 1.3rem 1.8rem;
+	padding-top: 0.7rem;
+	margin-inline: 1rem;
+	margin-bottom: 2rem;
+
+	border-top: 3px solid silver;
+	border-bottom: 3px solid silver;
+}

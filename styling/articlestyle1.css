@@ -1,0 +1,102 @@
+/* Table of Contents:
+ * 1. General Styling
+ * 2. header 
+ * 3. Navigation
+ * 4. Article
+ */
+
+
+/* 1. General Styling */
+
+:root {
+	--fs-general: clamp(1.1rem, 2.5vw, 1.36rem);
+
+	--clr-links-base: #40F0E0;
+	--clr-links-hover: #11FF00;
+
+	--clr-article-bg: rgba(128, 128, 128, 0.5);
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	
+	background-image: url('../pix/limanu.jpeg');
+	background-size: cover;
+	background-repeat: none;
+	background-attachment: fixed;
+
+	word-wrap: break-word;
+	font-size: var(--fs-general);
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-links-base);
+}
+
+a:hover {
+	color: var(--clr-links-hover);
+}
+
+a:focus { 
+	color: lightgreen;
+	outline: 2px solid red;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* 2. header */
+
+header {
+	background-color: cyan;
+	overflow: hidden;
+
+	color: yellow;
+	text-shadow: 2px 2px black;
+}
+
+
+/* 3. Navigation */
+
+nav {
+	margin-top: 2.9rem;
+}
+
+nav a {
+	display: inline-block;
+	background-color: gray;
+	border-left: 3px solid lime;
+	border-right: 3px solid lime;
+	padding: 0.4rem 0.7rem;
+	margin-right: 0.7rem;
+	margin-top: 0.3rem;
+}
+
+
+/* 4. Article */
+
+article {
+	width: min(70ch, 95%);
+	margin-inline: auto;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding: 1.3rem 1.8rem;
+	background-color: var(--clr-article-bg);
+
+	border-top: 3px solid silver;
+	border-bottom: 2px solid silver;
+}
+
+img {
+	width: 100%;
+	margin-top: 0.9rem;
+}
